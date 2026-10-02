@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <clipPath id="circleClip">
+    <circle cx="50" cy="50" r="48"/>
+  </clipPath>
+  <defs>
+    <radialGradient id="vignetteDark" cx="50%" cy="50%" r="60%">
+      <stop offset="50%" stop-color="#152036" stop-opacity="0" />
+      <stop offset="100%" stop-color="#05070d" stop-opacity="0.9" />
+    </radialGradient>
+
+    <linearGradient id="wingSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d6e4f5" />
+      <stop offset="70%" stop-color="#9cb8d6" />
+      <stop offset="100%" stop-color="#6783a3" />
+    </linearGradient>
+
+    <linearGradient id="wingSoftLavender" x1="50%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dbe5f5" />
+      <stop offset="70%" stop-color="#a7b8cf" />
+      <stop offset="100%" stop-color="#9a8ca6" />
+    </linearGradient>
+
+    <linearGradient id="iColumn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8cbcee" />
+      <stop offset="60%" stop-color="#6fa8dc" />
+      <stop offset="100%" stop-color="#4878a9" />
+    </linearGradient>
+
+    <linearGradient id="iDot" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#b4d7fa" />
+      <stop offset="100%" stop-color="#6fa8dc" />
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <rect width="100" height="100" fill="#0c1220" />
+    <rect width="100" height="100" fill="url(#vignetteDark)" />
+
+    <!-- Sol 'X' Kanatları -->
+    <path
+      d="M 47 47 L 22 22 C 27 26 29 32 28 37 C 30 42 36 48 38 52 C 32 54 25 61 23 70 C 30 76 37 80 44 76 C 40 68 38 60 45 52 Z"
+      fill="url(#wingSilver)"
+    />
+
+    <!-- Sağ 'X' Kanatları -->
+    <path
+      d="M 53 47 L 78 22 C 73 26 71 32 72 37 C 70 42 64 48 62 52 C 68 54 75 61 77 70 C 70 76 63 80 56 76 C 60 68 62 60 55 52 Z"
+      fill="url(#wingSoftLavender)"
+    />
+
+    <!-- Merkez 'i' Üst Oval Çakıl Noktası -->
+    <ellipse cx="49" cy="15" rx="5" ry="4" fill="url(#iDot)" />
+
+    <!-- Merkez 'i' Sütunu (Kırık kristal) -->
+    <path
+      d="M 45 25 C 49 24 53 24 55 25 C 54 35 52 46 51 58 L 50 86 C 48 83 47 75 46 64 C 44 50 44 37 45 25 Z"
+      fill="url(#iColumn)"
+    />
+    <path
+      d="M 55 25 C 56 31 54 42 53 54 C 55 64 54 75 51 86 L 50 86 L 51 58 C 52 46 54 35 55 25 Z"
+      fill="#426b97"
+      opacity="0.85"
+    />
+  </g>
+
+  <!-- Dış Halka İnce Çerçeve -->
+  <circle cx="50" cy="50" r="48" stroke="rgba(56,189,248,0.3)" stroke-width="2" />
+</svg>
