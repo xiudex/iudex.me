@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <!-- Background Vignette & Mood Gradients -->
+    <radialGradient id="topGlow" cx="20%" cy="15%" r="75%">
+      <stop offset="0%" stop-color="#0c2b48" stop-opacity="1" />
+      <stop offset="50%" stop-color="#091524" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#05080f" stop-opacity="1" />
+    </radialGradient>
+
+    <radialGradient id="bottomWarmth" cx="80%" cy="85%" r="65%">
+      <stop offset="0%" stop-color="#2c142b" stop-opacity="0.8" />
+      <stop offset="45%" stop-color="#190c1e" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="edgeVignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#030509" stop-opacity="0.85" />
+    </radialGradient>
+
+    <!-- Wing Gradients: Frosted Silver with subtle lavender and warm bottom sheen -->
+    <linearGradient id="topWings" x1="20%" y1="10%" x2="80%" y2="80%">
+      <stop offset="0%" stop-color="#d6e3f3" />
+      <stop offset="35%" stop-color="#b4c6dc" />
+      <stop offset="70%" stop-color="#93a8c3" />
+      <stop offset="100%" stop-color="#7389a4" />
+    </linearGradient>
+
+    <linearGradient id="bottomRightWing" x1="30%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#bcc9dc" />
+      <stop offset="40%" stop-color="#a8b5cc" />
+      <stop offset="80%" stop-color="#a493ab" />
+      <stop offset="100%" stop-color="#947c9c" />
+    </linearGradient>
+
+    <!-- Central 'I' Column Gradients -->
+    <linearGradient id="colLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7bb5f0" />
+      <stop offset="40%" stop-color="#64a3e4" />
+      <stop offset="80%" stop-color="#4986c7" />
+      <stop offset="100%" stop-color="#346da9" />
+    </linearGradient>
+
+    <linearGradient id="colRightShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c84be" />
+      <stop offset="50%" stop-color="#37689a" />
+      <stop offset="100%" stop-color="#244b74" />
+    </linearGradient>
+
+    <radialGradient id="pebbleDot" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#95c7fc" />
+      <stop offset="60%" stop-color="#63a2e2" />
+      <stop offset="100%" stop-color="#3e79b7" />
+    </radialGradient>
+
+    <!-- Fine canvas stipple filter for identical organic textured feel -->
+    <filter id="canvasGrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.05 0" />
+      <feComposite in2="SourceGraphic" in="gl" operator="arithmetic" k1="0" k2="1" k3="0.04" k4="0" />
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1000" height="1000" fill="#070c16" />
+  <rect width="1000" height="1000" fill="url(#topGlow)" />
+  <rect width="1000" height="1000" fill="url(#bottomWarmth)" />
+  <rect width="1000" height="1000" fill="url(#edgeVignette)" />
+
+  <!-- The Organic Hand-Drawn Monogram Glyph -->
+  <g id="glyph">
+    <!-- Top-Left & Bottom-Left Wings -->
+    <path
+      d="M 465 470
+         L 440 375
+         C 438 310, 420 255, 380 230
+         C 330 200, 260 215, 210 220
+         C 230 240, 265 270, 275 320
+         C 285 375, 280 430, 290 475
+         C 295 500, 310 525, 335 545
+         C 325 565, 305 615, 275 675
+         C 245 735, 220 780, 218 798
+         C 230 788, 285 735, 340 680
+         C 390 630, 435 570, 465 520
+         Z"
+      fill="url(#topWings)"
+    />
+
+    <!-- Top-Right Wing -->
+    <path
+      d="M 540 470
+         L 560 380
+         C 575 315, 620 250, 680 230
+         C 725 215, 755 220, 755 225
+         C 730 260, 690 320, 668 360
+         C 645 400, 615 440, 580 470
+         C 595 490, 615 505, 630 512
+         L 620 545
+         C 585 530, 560 500, 540 470
+         Z"
+      fill="url(#topWings)"
+    />
+
+    <!-- Bottom-Right Wing with Warm Atmosphere -->
+    <path
+      d="M 620 545
+         C 635 565, 660 615, 705 665
+         C 750 715, 775 780, 774 796
+         C 760 765, 720 705, 680 635
+         C 660 600, 640 570, 620 545
+         Z"
+      fill="url(#bottomRightWing)"
+    />
+
+    <!-- Additional faceted wing depth & silhouette tuning to match photo -->
+    <path
+      d="M 580 470
+         C 620 435, 670 380, 715 320
+         C 745 280, 755 225, 755 225
+         C 715 250, 665 310, 620 375
+         C 595 410, 575 445, 560 470
+         Z"
+      fill="#a3b4cc"
+      opacity="0.5"
+    />
+
+    <!-- Central 'I' Pebble Dot (Top) -->
+    <!-- Distinctive organic tilted pebble shape -->
+    <path
+      d="M 480 110
+         C 505 102, 532 115, 535 142
+         C 538 168, 515 188, 488 186
+         C 460 184, 445 160, 448 135
+         C 451 118, 465 114, 480 110
+         Z"
+      fill="url(#pebbleDot)"
+    />
+
+    <!-- Central 'I' Chiseled Stone Column -->
+    <!-- Left Main Highlight Facet -->
+    <path
+      d="M 458 248
+         L 568 202
+         L 562 355
+         C 555 420, 548 510, 560 600
+         L 583 710
+         L 550 835
+         L 508 700
+         C 485 595, 470 500, 465 410
+         L 435 385
+         L 445 310
+         Z"
+      fill="url(#colLeft)"
+    />
+
+    <!-- Right Shadow Facet & Central Fissure -->
+    <path
+      d="M 568 202
+         L 562 355
+         C 555 420, 548 510, 560 600
+         L 583 710
+         L 550 835
+         L 553 740
+         C 542 660, 535 550, 538 430
+         C 540 340, 550 260, 568 202
+         Z"
+      fill="url(#colRightShadow)"
+    />
+
+    <!-- Left Tapered Bottom Shard & Point -->
+    <path
+      d="M 550 835
+         C 545 810, 535 750, 518 690
+         C 498 620, 480 540, 475 460
+         L 485 520
+         C 492 610, 510 700, 530 760
+         Z"
+      fill="#3a6f9f"
+      opacity="0.7"
+    />
+  </g>
+</svg>
